@@ -2,7 +2,7 @@
  * @Desc: ---   ----
  * @Date: 2019-11-11 15:09:19
  * @LastEditors: 王
- * @LastEditTime: 2019-11-12 10:48:20
+ * @LastEditTime: 2019-11-12 10:52:44
  -->
 
 # 常用方法
@@ -125,9 +125,12 @@ function dataURLtoFile(dataurl, filename) {
 }
 ```
 
-## 原图转回 base64 @return base64
+## 原图转回 base64
 
 ```javascript
+/*
+   @return base64
+*/
 function img2file(src, can_w, can_h, callback) {
   var _caipu_img = new Image()
 
@@ -142,36 +145,6 @@ function img2file(src, can_w, can_h, callback) {
     var h = _caipu_img.height
 
     ctx.drawImage(_caipu_img, 0, 0, w, h)
-
-    //异步操作 不回调可能会取到undefined
-
-    if (callback && typeof callback == 'function') {
-      return callback(canvas.toDataURL('image/png', 1))
-    }
-  }
-}
-```
-
-## 原图转回 base64 @return base64
-
-```javascript
-function img2files(src, can_w, can_h, callback) {
-  var _caipu_img = new Image()
-
-  _caipu_img.src = src
-
-  _caipu_img.onload = function() {
-    var canvas = document.createElement('canvas')
-    var ctx = canvas.getContext('2d')
-
-    var calc = _caipu_img.width / _caipu_img.height
-    canvas.width = 150
-    canvas.height = 150
-
-    var w = _caipu_img.width
-    var h = _caipu_img.height
-
-    ctx.drawImage(_caipu_img, 0, 0, 150, 150)
 
     //异步操作 不回调可能会取到undefined
 
