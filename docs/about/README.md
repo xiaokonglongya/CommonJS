@@ -2,7 +2,7 @@
  * @Desc: ---   ----
  * @Date: 2019-11-11 16:26:10
  * @LastEditors: 王
- * @LastEditTime: 2019-11-12 10:16:14
+ * @LastEditTime: 2019-11-12 10:20:37
  -->
 
 # 使用手册
@@ -34,3 +34,7 @@ npm run docs:build
 ```
 
 完成之后推送至远程分支
+
+## 关于本站
+
+使用 [vuepress](https://vuepress.vuejs.org/zh/) 构建,[github](https://github.com)+[Netlify](https://app.netlify.com) 实现自动化构建。
